@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CIS350Project</string>
+    <string name="login">Log In</string>
+    <string name="student">Student</string>
+    <string name="parent">Parent</string>
+    <string name="create">Create Account</string>
+    <string name="createParent">Create Parent Account</string>
+    <string name="createStudent">Create Student Account</string>
+</resources>
