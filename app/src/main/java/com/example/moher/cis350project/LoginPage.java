@@ -24,6 +24,7 @@ public class LoginPage extends AppCompatActivity {
         Button create = findViewById(R.id.create);
         Button student = findViewById(R.id.student);
         Button parent = findViewById(R.id.parent);
+        Button math = findViewById(R.id.math);
 
         Intent current = getIntent();
         usernames = (HashMap) current.getSerializableExtra("data");
@@ -55,6 +56,16 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginPage.this, ParentLogin.class);
                 intent.putExtra("data", usernames);
+                startActivity(intent);
+            }
+
+        });
+
+        math.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginPage.this, MathGame.class);
+                //intent.putExtra("data", usernames);
                 startActivity(intent);
             }
 
