@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MathGame3"></activity>
+        <activity android:name=".MathGame" />
         <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +21,6 @@
         <activity android:name=".CreateAccount" />
         <activity android:name=".ParentLogin" />
         <activity android:name=".StudentLogin" />
-        <activity android:name=".ParentHome" />
-        <activity android:name=".StudentHome"></activity>
     </application>
 
 </manifest>

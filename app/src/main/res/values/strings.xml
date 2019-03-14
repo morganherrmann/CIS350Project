@@ -8,4 +8,5 @@
     <string name="createStudent">Create Student Account</string>
     <string name="parentLogin">Login as Parent</string>
     <string name="studentLogin">Login as Student</string>
+    <string name="submitAnswer">Submit Answer</string>
 </resources>
