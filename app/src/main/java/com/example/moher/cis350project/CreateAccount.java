@@ -21,7 +21,7 @@ public class CreateAccount extends AppCompatActivity {
     private String userName;
     private String password;
 
-    private HashMap<String, String> usernames = new HashMap<>();
+    private HashMap<String, String> usernames;
 
 
 
@@ -62,14 +62,23 @@ public class CreateAccount extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+
+
 
         Button parent = findViewById(R.id.createParentAcc);
         Button student = findViewById(R.id.createStudentAcc);
 
         Intent current = getIntent();
         usernames = (HashMap) current.getSerializableExtra("data");
+
+        if (usernames == null){
+            usernames = new HashMap<>();
+        }
+
 
 
         parent.setOnClickListener(new View.OnClickListener() {
