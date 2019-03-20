@@ -11,6 +11,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MathGame3"></activity>
         <activity android:name=".MathGame" />
+        <activity android:name=".ReadingGameMain" />
+        <activity android:name=".ReadingGame1" />
+        <activity android:name=".ReadingGame2" />
+        <activity android:name=".ReadingGame3" />
+
         <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
