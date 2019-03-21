@@ -1,0 +1,30 @@
+<animation-list android:id="@+id/alphbet_song_animation"
+    android:oneshot="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/a" android:duration="3500" />
+    <item android:drawable="@drawable/b" android:duration="500" />
+    <item android:drawable="@drawable/c" android:duration="610" />
+    <item android:drawable="@drawable/d" android:duration="800" />
+    <item android:drawable="@drawable/e" android:duration="800" />
+    <item android:drawable="@drawable/f" android:duration="750" />
+    <item android:drawable="@drawable/g" android:duration="1500" />
+    <item android:drawable="@drawable/h" android:duration="710" />
+    <item android:drawable="@drawable/i" android:duration="700" />
+    <item android:drawable="@drawable/j" android:duration="700" />
+    <item android:drawable="@drawable/k" android:duration="700" />
+    <item android:drawable="@drawable/l" android:duration="450" />
+    <item android:drawable="@drawable/m" android:duration="450" />
+    <item android:drawable="@drawable/n" android:duration="450" />
+    <item android:drawable="@drawable/o" android:duration="450" />
+    <item android:drawable="@drawable/p" android:duration="1500" />
+    <item android:drawable="@drawable/q" android:duration="700" />
+    <item android:drawable="@drawable/r" android:duration="700" />
+    <item android:drawable="@drawable/s" android:duration="1300" />
+    <item android:drawable="@drawable/t" android:duration="1000" />
+    <item android:drawable="@drawable/u" android:duration="1000" />
+    <item android:drawable="@drawable/v" android:duration="1200" />
+    <item android:drawable="@drawable/w" android:duration="1500" />
+    <item android:drawable="@drawable/x" android:duration="1500" />
+    <item android:drawable="@drawable/y" android:duration="1500" />
+    <item android:drawable="@drawable/z" android:duration="1000" />
+</animation-list>
