@@ -21,6 +21,8 @@
         <activity android:name=".CreateAccount" />
         <activity android:name=".ParentLogin" />
         <activity android:name=".StudentLogin" />
+        <activity android:name=".ParentHome" />
+        <activity android:name=".StudentHome" />
     </application>
 
 </manifest>

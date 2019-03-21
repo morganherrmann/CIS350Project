@@ -15,7 +15,7 @@
         android:layout_height = "wrap_content"
         android:width="300dp"
         android:layout_gravity="center_horizontal"
-        android:inputType = "textPassword" />
+       />
 
     <EditText
         android:id = "@+id/studentPass"
@@ -24,7 +24,7 @@
         android:layout_height = "wrap_content"
         android:width="300dp"
         android:layout_gravity="center_horizontal"
-        android:inputType = "textPassword" />
+       />
 
     <Button
         android:id = "@+id/studentLogin"
