@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/CIS350.iml" filepath="$PROJECT_DIR$/CIS350.iml" />
-      <module fileurl="file://D:\CIS350\CIS350Project.iml" filepath="D:\CIS350\CIS350Project.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/CIS350Project.iml" filepath="$PROJECT_DIR$/CIS350Project.iml" />
-      <module fileurl="file://C:\Users\Angel\Desktop\CIS350Project\CIS350Project.iml" filepath="C:\Users\Angel\Desktop\CIS350Project\CIS350Project.iml" />
->>>>>>> 320a4d744e90fdc05dc521d21ca635f2e2d178ec
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Angel\Desktop\CIS350Project\app\app.iml" filepath="C:\Users\Angel\Desktop\CIS350Project\app\app.iml" />
     </modules>
   </component>
 </project>

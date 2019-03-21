@@ -9,4 +9,11 @@
     <string name="parentLogin">Login as Parent</string>
     <string name="studentLogin">Login as Student</string>
     <string name="submitAnswer">Submit Answer</string>
+    <string name="resumeMath">Learn Math</string>
+    <string name="resumeRead">Learn Reading</string>
+    <string-array name="children">
+        <item>Child 1</item>
+        <item>Child 2</item>
+    </string-array>
+
 </resources>
