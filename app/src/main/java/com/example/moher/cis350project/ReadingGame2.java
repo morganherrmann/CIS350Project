@@ -56,6 +56,7 @@ public class ReadingGame2 extends AppCompatActivity{
     TextView gameResults;
     Button playAgain;
     Button goBack;
+    Button nextLevel;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +68,7 @@ public class ReadingGame2 extends AppCompatActivity{
         gameResults = (TextView)findViewById(R.id.gameResults);
         playAgain = (Button)findViewById(R.id.playAgain);
         goBack = (Button)findViewById(R.id.goBack);
+        nextLevel = (Button)findViewById(R.id.nextLevel);
 
         order = new ArrayList<>();
         for (int i = 0; i < recordings.length; i++) {
@@ -177,6 +179,7 @@ public class ReadingGame2 extends AppCompatActivity{
         gameResults.setVisibility(View.VISIBLE);
         playAgain.setVisibility(View.VISIBLE);
         goBack.setVisibility(View.VISIBLE);
+        nextLevel.setVisibility(View.VISIBLE);
 
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -187,6 +190,7 @@ public class ReadingGame2 extends AppCompatActivity{
                 gameResults.setVisibility(View.INVISIBLE);
                 playAgain.setVisibility(View.INVISIBLE);
                 goBack.setVisibility(View.INVISIBLE);
+                nextLevel.setVisibility(View.INVISIBLE);
                 nextWord();
             }
         });
@@ -194,8 +198,18 @@ public class ReadingGame2 extends AppCompatActivity{
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent i = new Intent(ReadingGame2.this, ReadingGameMain.class);
+                startActivity(i);
             }
         });
+
+        nextLevel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ReadingGame2.this, ReadingGame3.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

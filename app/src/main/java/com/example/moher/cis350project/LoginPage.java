@@ -60,7 +60,7 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = getIntent();
                 usernames = (HashMap) i.getSerializableExtra("data");
-                Log.i("Size of usernames", " " + usernames.size());
+                //Log.i("Size of usernames", " " + usernames.size());
                 Intent intent = new Intent(LoginPage.this, ParentLogin.class);
                 intent.putExtra("data", usernames);
                 startActivity(intent);

@@ -162,8 +162,10 @@ public class ReadingGame4 extends AppCompatActivity{
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent i = new Intent(ReadingGame4.this, ReadingGameMain.class);
+                startActivity(i);
             }
         });
+
     }
 }
