@@ -7,19 +7,49 @@
     android:orientation="vertical"
     tools:context=".MathGame">
 
+    <TextView
+        android:id="@+id/levelMath"
+        android:layout_width="150sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:padding="2dp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:text="MATH GAMES"
+        />
+
     <Button
         android:id = "@+id/mathlevel1"
         android:layout_width="200dp"
         android:layout_height="70dp"
+        android:layout_marginTop="100dp"
         android:text="Level 1"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:background="@color/blue"
+        android:textColor="@android:color/white"/>
+
+
 
     <Button
         android:id = "@+id/mathlevel2"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        android:text="Level 2"
-        android:layout_gravity="center_horizontal"/>
+        android:text="Level 3"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/red"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id = "@+id/minutemath"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="Minute Math"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/yellow"
+        android:textColor="@android:color/white"/>
+
+
 
     <Button
         android:id = "@+id/mathlevel3"

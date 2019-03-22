@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MathGame1"></activity>
+
+        <activity android:name=".MathGame1"/>
         <activity android:name=".MathGame2" />
         <activity android:name=".MathGame3" />
         <activity android:name=".MathGame" />
@@ -17,6 +18,7 @@
         <activity android:name=".ReadingGame1" />
         <activity android:name=".ReadingGame2" />
         <activity android:name=".ReadingGame3" />
+        <activity android:name=".ReadingGame4" />
 
         <activity android:name=".LoginPage">
             <intent-filter>
@@ -30,6 +32,7 @@
         <activity android:name=".StudentLogin" />
         <activity android:name=".ParentHome" />
         <activity android:name=".StudentHome" />
+        <activity android:name=".MinuteMath"></activity>
     </application>
 
 </manifest>

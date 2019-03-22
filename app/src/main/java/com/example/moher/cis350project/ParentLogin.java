@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,8 +49,17 @@ public class ParentLogin extends AppCompatActivity {
 //
 //                Log.i("Key and value ", key + " " + value);
 
-                if (usernames.get(user).equals(pass)){
-                    startActivity(intent);
+                if (usernames != null && usernames.get(user) != null){
+                    if (usernames.get(user).equals(pass)) {
+                        intent.putExtra("name", user);
+                        startActivity(intent);
+                    } else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Wrong password!", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "User doesn't exist!", Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
 
