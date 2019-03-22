@@ -1,8 +1,6 @@
 package com.example.moher.cis350project;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -13,11 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 //learn numbers by matching pictures to numbers
@@ -88,7 +83,10 @@ public class MathGame1 extends AppCompatActivity {
 
                     toast.show();
 
-                    index = rand.nextInt(problemAnswers.size());
+                    int prevIndex = index;
+                    while(index == prevIndex) {
+                        index = rand.nextInt(problemAnswers.size());
+                    }
                     currKey = Integer.parseInt(problemAnswers.keySet().toArray()[index].toString());
 
 

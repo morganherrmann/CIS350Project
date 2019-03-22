@@ -25,9 +25,9 @@ public class LoginPage extends AppCompatActivity {
         Button create = findViewById(R.id.create);
         Button student = findViewById(R.id.student);
         Button parent = findViewById(R.id.parent);
-        Button math = findViewById(R.id.math);
-        Button reading = findViewById(R.id.reading);
-        Button minutemath = findViewById(R.id.minutemath);
+       // Button math = findViewById(R.id.math);
+       // Button reading = findViewById(R.id.reading);
+        //Button minutemath = findViewById(R.id.minutemath);
 
         Intent current = getIntent();
 
