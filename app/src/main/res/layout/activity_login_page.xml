@@ -73,35 +73,5 @@
         android:textColor="@android:color/white"
         />
 
-    <Button
-        android:id="@+id/math"
-        android:layout_width="200dp"
-        android:textSize="25dp"
-        android:layout_height="wrap_content"
-        android:text="math game"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10px"
-        android:background="@color/yellow"
-        android:textColor="@android:color/white"
-        />
-
-    <Button
-        android:id="@+id/reading"
-        android:layout_width="200dp"
-        android:textSize="25dp"
-        android:layout_height="wrap_content"
-        android:text="reading game"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10px"
-        android:background="@color/yellow"
-        android:textColor="@android:color/white"
-        />
-
-    <Button
-        android:id = "@+id/minutemath"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:text="Minute math"
-        android:layout_gravity="center_horizontal"/>
-
+    
 </LinearLayout>

@@ -71,32 +71,32 @@ public class LoginPage extends AppCompatActivity {
 
         });
 
-        math.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginPage.this, MathGame.class);
-                startActivity(intent);
-            }
-
-        });
-
-        reading.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginPage.this, ReadingGameMain.class);
-                startActivity(intent);
-            }
-
-        });
-
-        minutemath.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginPage.this, MinuteMath.class);
-                startActivity(intent);
-            }
-
-        });
+//        math.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginPage.this, MathGame.class);
+//                startActivity(intent);
+//            }
+//
+//        });
+//
+//        reading.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginPage.this, ReadingGameMain.class);
+//                startActivity(intent);
+//            }
+//
+//        });
+//
+//        minutemath.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginPage.this, MinuteMath.class);
+//                startActivity(intent);
+//            }
+//
+//        });
 
     }
 
