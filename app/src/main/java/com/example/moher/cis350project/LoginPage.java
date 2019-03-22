@@ -27,9 +27,14 @@ public class LoginPage extends AppCompatActivity {
         Button parent = findViewById(R.id.parent);
         Button math = findViewById(R.id.math);
         Button reading = findViewById(R.id.reading);
+        Button minutemath = findViewById(R.id.minutemath);
 
         Intent current = getIntent();
-        usernames = (HashMap) current.getSerializableExtra("data");
+
+        if (current.getSerializableExtra("data") != null) {
+
+            usernames = (HashMap) current.getSerializableExtra("data");
+        }
 
 
 
@@ -79,7 +84,15 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginPage.this, ReadingGameMain.class);
-                //intent.putExtra("data", usernames);
+                startActivity(intent);
+            }
+
+        });
+
+        minutemath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginPage.this, MinuteMath.class);
                 startActivity(intent);
             }
 

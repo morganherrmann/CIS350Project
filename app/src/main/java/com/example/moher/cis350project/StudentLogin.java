@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -42,8 +43,17 @@ public class StudentLogin extends AppCompatActivity {
                 String pass = password.getText().toString();
 
 
-                if (usernames.get(user).equals(pass)){
-                    startActivity(intent);
+                if (usernames != null && usernames.get(user) != null){
+                    if (usernames.get(user).equals(pass)) {
+                        intent.putExtra("name", user);
+                        startActivity(intent);
+                    } else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Wrong password!", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "User doesn't exist!", Toast.LENGTH_SHORT);
+                    toast.show();
                 }
             }
 
