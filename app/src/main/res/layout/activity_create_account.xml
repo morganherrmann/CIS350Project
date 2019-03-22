@@ -19,7 +19,7 @@
         android:layout_height = "wrap_content"
         android:width="300dp"
         android:layout_gravity="center_horizontal"
-        android:inputType = "textPassword" />
+        />
 
     <EditText
         android:id = "@+id/lastName"
@@ -28,7 +28,7 @@
         android:layout_height = "wrap_content"
         android:width="300dp"
         android:layout_gravity="center_horizontal"
-        android:inputType = "textPassword" />
+         />
 
     <EditText
         android:id = "@+id/userName"
@@ -37,7 +37,7 @@
         android:layout_height = "wrap_content"
         android:width="300dp"
         android:layout_gravity="center_horizontal"
-        android:inputType = "textPassword" />
+         />
 
     <EditText
         android:id = "@+id/userPassword"
@@ -46,7 +46,7 @@
         android:layout_height = "wrap_content"
         android:width="300dp"
         android:layout_gravity="center_horizontal"
-        android:inputType = "textPassword" />
+        />
 
     <Button
         android:id = "@+id/createParentAcc"

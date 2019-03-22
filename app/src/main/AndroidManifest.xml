@@ -13,6 +13,11 @@
         <activity android:name=".MathGame2" />
         <activity android:name=".MathGame3" />
         <activity android:name=".MathGame" />
+        <activity android:name=".ReadingGameMain" />
+        <activity android:name=".ReadingGame1" />
+        <activity android:name=".ReadingGame2" />
+        <activity android:name=".ReadingGame3" />
+
         <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +28,8 @@
         <activity android:name=".CreateAccount" />
         <activity android:name=".ParentLogin" />
         <activity android:name=".StudentLogin" />
+        <activity android:name=".ParentHome" />
+        <activity android:name=".StudentHome" />
     </application>
 
 </manifest>

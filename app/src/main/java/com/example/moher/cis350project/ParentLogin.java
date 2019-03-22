@@ -3,8 +3,14 @@ package com.example.moher.cis350project;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ParentLogin extends AppCompatActivity {
 
@@ -18,5 +24,35 @@ public class ParentLogin extends AppCompatActivity {
 
         Intent current = getIntent();
         usernames = (HashMap) current.getSerializableExtra("data");
+        Log.i("In login for parents " , " "+ usernames.size() );
+
+
+        Button login = findViewById(R.id.parentLogin);
+
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ParentLogin.this, ParentHome.class);
+
+                TextView username = findViewById(R.id.parentUser);
+                TextView password = findViewById(R.id.parentPass);
+
+
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+
+//                Map.Entry<String,String> entry = usernames.entrySet();
+//                String key = entry.getKey();
+//                String value = entry.getValue();
+//
+//                Log.i("Key and value ", key + " " + value);
+
+                if (usernames.get(user).equals(pass)){
+                    startActivity(intent);
+                }
+            }
+
+        });
     }
 }

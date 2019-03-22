@@ -1,7 +1,10 @@
 package com.example.moher.cis350project;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class StudentHome extends AppCompatActivity {
 
@@ -9,5 +12,31 @@ public class StudentHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_home);
+
+        Button math = findViewById(R.id.doMath);
+        Button reading = findViewById(R.id.doReading);
+
+        math.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StudentHome.this, MathGame.class);
+                startActivity(intent);
+
+            }
+
+        });
+
+        reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StudentHome.this, ReadingGameMain.class);
+                startActivity(intent);
+
+            }
+
+        });
+
+
+
     }
 }

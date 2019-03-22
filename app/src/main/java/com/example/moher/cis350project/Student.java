@@ -17,6 +17,10 @@ public class Student {
     private String parentID;
 
 
+    private int mathPoints;
+    private int readingPoints;
+
+
     public Student(String firstName, String lastName, String userName, String password){
 
         this.firstName = firstName;
