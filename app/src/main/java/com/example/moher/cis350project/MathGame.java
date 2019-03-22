@@ -54,6 +54,28 @@ public class MathGame extends AppCompatActivity {
             }
         });
 
+        Button minuteMath = findViewById(R.id.minutemath);
+
+        minuteMath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MathGame.this, MinuteMath.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+        Button mainMenu = findViewById(R.id.mainmenu);
+
+        mainMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MathGame.this, StudentHome.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

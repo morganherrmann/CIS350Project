@@ -4,9 +4,11 @@ package com.example.moher.cis350project;
  * Created by Angel on 3/20/2019.
  */
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -94,9 +96,23 @@ public class ReadingGame4 extends AppCompatActivity{
             public void onClick(View view)
             {
                 if (!word.getText().toString().toLowerCase().equals(words[order.get(count[0])].toLowerCase())) {
-                    Toast.makeText(view.getContext(), "Sorry! That's incorrect. Try again!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(view.getContext(), "Sorry! That's incorrect. Try again!", Toast.LENGTH_SHORT).show();
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Try again!", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, -150, -450);
+                    View toastView = toast.getView();
+                    toastView.setBackgroundColor(Color.RED);
+
+                    toast.show();
                 } else {
-                    Toast.makeText(view.getContext(), "That's right!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(view.getContext(), "That's right!", Toast.LENGTH_SHORT).show();
+                    Toast toast = Toast.makeText(getApplicationContext(),
+                            "Correct!", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, -150, -450);
+                    View toastView = toast.getView();
+                    toastView.setBackgroundColor(Color.GREEN);
+
+                    toast.show();
                     score[0]++;
                     count[0]++;
                     word.setText("");
