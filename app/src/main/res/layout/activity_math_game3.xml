@@ -15,8 +15,10 @@ tools:context=".MathGame3">
     android:text=""
     android:textColor="@android:color/holo_blue_dark"
     android:textColorHighlight="@android:color/primary_text_dark"
+    android:gravity="center"
     android:layout_gravity="center"
     android:textSize="50dp"/>
+
 
 <EditText
     android:id = "@+id/answer"
