@@ -21,8 +21,8 @@ public class ReadingGame1 extends AppCompatActivity{
 
         // gets the background to be animated
         AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
-        MediaPlayer ring= MediaPlayer.create(ReadingGame1.this,R.raw.alphabet_song);
-        ring.start();
+        MediaPlayer song = MediaPlayer.create(ReadingGame1.this, R.raw.alphabet_song);
+        song.start();
         // start the animation
         frameAnimation.start();
     }
