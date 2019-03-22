@@ -87,7 +87,10 @@ public class MinuteMath extends AppCompatActivity  {
                 if (!done) {
                     TextView solut = findViewById(R.id.solution);
                     String num = solut.getText().toString();
-                    int ans = Integer.parseInt(num);
+                    int ans = 0;
+                    if (num != "") {
+                        ans = Integer.parseInt(num);
+                    }
 
                     if (ans == (int) curr_problem.getValue()) {
                         Toast toast = Toast.makeText(getApplicationContext(), "CORRECT!", Toast.LENGTH_SHORT);
@@ -102,8 +105,7 @@ public class MinuteMath extends AppCompatActivity  {
 
                     }
                 } else {
-                    Intent intent = new Intent(MinuteMath.this, MathGame.class);
-                    startActivity(intent);
+                    finish();
                 }
 
             }
