@@ -89,9 +89,6 @@ public class MathGame1 extends AppCompatActivity {
                     toast.show();
 
 
-
-
-                    //find a new problem that has not been used already
                    // while(usedProblems.contains(currKey)) {
                         index = rand.nextInt(problemAnswers.size());
                         currKey = Integer.parseInt(problemAnswers.keySet().toArray()[index].toString());
