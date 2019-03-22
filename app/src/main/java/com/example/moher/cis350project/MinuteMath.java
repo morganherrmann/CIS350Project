@@ -1,5 +1,6 @@
 package com.example.moher.cis350project;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,6 +73,8 @@ public class MinuteMath extends AppCompatActivity  {
                     public void onFinish(){
                         textView.setText("TIME IS UP!!");
                         done = true;
+
+                        checkAnswer.setText("MENU");
                     }
                 }.start();
             }
@@ -81,21 +84,26 @@ public class MinuteMath extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                TextView solut = findViewById(R.id.solution);
-                String num = solut.getText().toString();
-                int ans = Integer.parseInt(num);
+                if (!done) {
+                    TextView solut = findViewById(R.id.solution);
+                    String num = solut.getText().toString();
+                    int ans = Integer.parseInt(num);
 
-                if (ans == (int) curr_problem.getValue()){
-                    Toast toast = Toast.makeText(getApplicationContext(), "CORRECT!", Toast.LENGTH_SHORT);
-                    toast.show();
-                    curr_problem = (Map.Entry) it.next();
-                    problem.setText(curr_problem.getKey().toString());
-                    solut.setText("");
+                    if (ans == (int) curr_problem.getValue()) {
+                        Toast toast = Toast.makeText(getApplicationContext(), "CORRECT!", Toast.LENGTH_SHORT);
+                        toast.show();
+                        curr_problem = (Map.Entry) it.next();
+                        problem.setText(curr_problem.getKey().toString());
+                        solut.setText("");
+                    } else {
+                        solut.setText("");
+                        Toast toast = Toast.makeText(getApplicationContext(), "TRY AGAIN", Toast.LENGTH_SHORT);
+                        toast.show();
+
+                    }
                 } else {
-                    solut.setText("");
-                    Toast toast = Toast.makeText(getApplicationContext(), "TRY AGAIN", Toast.LENGTH_SHORT);
-                    toast.show();
-
+                    Intent intent = new Intent(MinuteMath.this, MathGame.class);
+                    startActivity(intent);
                 }
 
             }
