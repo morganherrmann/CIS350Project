@@ -4,12 +4,12 @@ package com.example.moher.cis350project;
  * Created by Angel on 3/20/2019.
  */
 import android.content.Intent;
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ReadingGame3 extends AppCompatActivity{
+public class ReadingGame4 extends AppCompatActivity{
     private String[] words = new String[] {
             "Apple",
             "Banana",
@@ -54,28 +54,27 @@ public class ReadingGame3 extends AppCompatActivity{
             R.drawable.igloo
     };
 
-    final boolean[] leftCorrect = {true};
     final int[] count = {0};
     final int[] score = {0};
 
     ArrayList<Integer> order;
 
-    ImageView leftChoice;
-    ImageView rightChoice;
-    ImageView sound;
-    TextView word;
+    ImageView image;
+    ImageView submit;
+    EditText word;
+
     TextView gameResults;
     Button playAgain;
     Button goBack;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.reading_game_level3);
+        setContentView(R.layout.reading_game_level4);
 
-        leftChoice = (ImageView)findViewById(R.id.match_image_left);
-        rightChoice = (ImageView)findViewById(R.id.match_image_right);
-        sound = (ImageView)findViewById(R.id.word_sound);
-        word = (TextView)findViewById(R.id.word_writing);
+        image = (ImageView)findViewById(R.id.imageOfWord);
+        submit = (ImageView)findViewById(R.id.submit);
+        word = (EditText) findViewById(R.id.word_writing);
+
         gameResults = (TextView)findViewById(R.id.gameResults);
         playAgain = (Button)findViewById(R.id.playAgain);
         goBack = (Button)findViewById(R.id.goBack);
@@ -89,33 +88,18 @@ public class ReadingGame3 extends AppCompatActivity{
 
         nextWord();
 
-        leftChoice.setOnClickListener(new View.OnClickListener()
+        submit.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                if (!leftCorrect[0]) {
+                if (!word.getText().toString().toLowerCase().equals(words[order.get(count[0])].toLowerCase())) {
                     Toast.makeText(view.getContext(), "Sorry! That's incorrect. Try again!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(view.getContext(), "That's right!", Toast.LENGTH_SHORT).show();
                     score[0]++;
                     count[0]++;
-                    nextWord();
-                }
-            }
-        });
-
-        rightChoice.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                if (leftCorrect[0]) {
-                    Toast.makeText(view.getContext(), "Sorry! That's incorrect. Try again!", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(view.getContext(), "That's right!", Toast.LENGTH_SHORT).show();
-                    score[0]++;
-                    count[0]++;
+                    word.setText("");
                     nextWord();
                 }
             }
@@ -128,29 +112,12 @@ public class ReadingGame3 extends AppCompatActivity{
             endGame();
             return;
         }
-        int wrong = (int) (Math.random()*recordings.length);
 
-        while (count[0] == wrong) {
-            wrong = (int) (Math.random()*recordings.length);
-        }
+        final MediaPlayer recording = MediaPlayer.create(ReadingGame4.this, recordings[order.get(count[0])]);
 
-        final MediaPlayer recording = MediaPlayer.create(ReadingGame3.this, recordings[order.get(count[0])]);
+        image.setImageDrawable(getResources().getDrawable(images[order.get(count[0])]));
 
-        word.setText(words[order.get(count[0])]);
-
-        if (Math.random() < 0.5) {
-            // use left one as correct one
-            leftChoice.setImageDrawable(getResources().getDrawable(images[order.get(count[0])]));
-            rightChoice.setImageDrawable(getResources().getDrawable(images[order.get(wrong)]));
-            leftCorrect[0] = true;
-        } else {
-            // use right one as correct one
-            leftChoice.setImageDrawable(getResources().getDrawable(images[order.get(wrong)]));
-            rightChoice.setImageDrawable(getResources().getDrawable(images[order.get(count[0])]));
-            leftCorrect[0] = false;
-        }
-
-        sound.setOnClickListener(new View.OnClickListener() {
+        image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recording.start();

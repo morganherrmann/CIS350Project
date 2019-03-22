@@ -63,8 +63,8 @@ public class ReadingGame2 extends AppCompatActivity{
         rightChoice = (ImageView)findViewById(R.id.match_image_right);
         sound = (ImageView)findViewById(R.id.word_sound);
         gameResults = (TextView)findViewById(R.id.gameResults);
-        playAgain = (Button)findViewById(R.id.playAgainReadingLevel2);
-        goBack = (Button)findViewById(R.id.readingLevel2Back);
+        playAgain = (Button)findViewById(R.id.playAgain);
+        goBack = (Button)findViewById(R.id.goBack);
 
         order = new ArrayList<>();
         for (int i = 0; i < recordings.length; i++) {
@@ -120,17 +120,17 @@ public class ReadingGame2 extends AppCompatActivity{
             wrong = (int) (Math.random()*recordings.length);
         }
 
-        final MediaPlayer word = MediaPlayer.create(ReadingGame2.this, recordings[count[0]]);
+        final MediaPlayer word = MediaPlayer.create(ReadingGame2.this, recordings[order.get(count[0])]);
 
         if (Math.random() < 0.5) {
             // use left one as correct one
-            leftChoice.setImageDrawable(getResources().getDrawable(images[count[0]]));
-            rightChoice.setImageDrawable(getResources().getDrawable(images[wrong]));
+            leftChoice.setImageDrawable(getResources().getDrawable(images[order.get(count[0])]));
+            rightChoice.setImageDrawable(getResources().getDrawable(images[order.get(wrong)]));
             leftCorrect[0] = true;
         } else {
             // use right one as correct one
-            leftChoice.setImageDrawable(getResources().getDrawable(images[wrong]));
-            rightChoice.setImageDrawable(getResources().getDrawable(images[count[0]]));
+            leftChoice.setImageDrawable(getResources().getDrawable(images[order.get(wrong)]));
+            rightChoice.setImageDrawable(getResources().getDrawable(images[order.get(count[0])]));
             leftCorrect[0] = false;
         }
 

@@ -18,6 +18,8 @@
         <activity android:name=".ReadingGame1" />
         <activity android:name=".ReadingGame2" />
         <activity android:name=".ReadingGame3" />
+        <activity android:name=".ReadingGame4" />
+
         <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
