@@ -65,6 +65,7 @@
         android:layout_height="70dp"
         android:text="Main Menu"
         android:layout_gravity="center_horizontal"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:background="@color/yellow"/>
 
 </LinearLayout>

@@ -19,7 +19,7 @@ public class StudentHome extends AppCompatActivity {
 
         TextView welcome = findViewById(R.id.welcome);
 
-        welcome.setText("Welcome " + username + "!");
+        welcome.setText("Welcome!"); // + username + "!");
 
         Button math = findViewById(R.id.doMath);
         Button reading = findViewById(R.id.doReading);

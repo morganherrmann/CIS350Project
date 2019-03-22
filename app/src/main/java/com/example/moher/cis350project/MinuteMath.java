@@ -1,6 +1,7 @@
 package com.example.moher.cis350project;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.util.Map;
 
 
 public class MinuteMath extends AppCompatActivity  {
-    public int counter;
+    public int counter = 60;
     Button button;
     Button checkAnswer;
     TextView textView;
@@ -51,7 +52,7 @@ public class MinuteMath extends AppCompatActivity  {
         problems.put("3 + 4", 7);
         problems.put("30 - 15", 15);
         problems.put("17 - 7", 10);
-        problems.put("12 + 16", 18);
+        problems.put("12 + 16", 28);
         problems.put("17 + 5", 22);
 
         it = problems.entrySet().iterator();
@@ -65,10 +66,10 @@ public class MinuteMath extends AppCompatActivity  {
 
                 problem.setText(curr_problem.getKey().toString());
 
-                new CountDownTimer(30000, 1000){
+                new CountDownTimer(60000, 1000){
                     public void onTick(long millisUntilFinished){
                         textView.setText(String.valueOf(counter));
-                        counter++;
+                        counter--;
                     }
                     public void onFinish(){
                         textView.setText("TIME IS UP!!");
@@ -94,6 +95,8 @@ public class MinuteMath extends AppCompatActivity  {
 
                     if (ans == (int) curr_problem.getValue()) {
                         Toast toast = Toast.makeText(getApplicationContext(), "CORRECT!", Toast.LENGTH_SHORT);
+                        View toastView = toast.getView();
+                        toastView.setBackgroundColor(Color.GREEN);
                         toast.show();
                         curr_problem = (Map.Entry) it.next();
                         problem.setText(curr_problem.getKey().toString());
@@ -101,6 +104,8 @@ public class MinuteMath extends AppCompatActivity  {
                     } else {
                         solut.setText("");
                         Toast toast = Toast.makeText(getApplicationContext(), "TRY AGAIN", Toast.LENGTH_SHORT);
+                        View toastView = toast.getView();
+                        toastView.setBackgroundColor(Color.RED);
                         toast.show();
 
                     }
