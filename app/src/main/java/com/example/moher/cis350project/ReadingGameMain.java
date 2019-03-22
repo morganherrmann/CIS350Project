@@ -19,6 +19,7 @@ public class ReadingGameMain extends AppCompatActivity{
         Button level2 = findViewById(R.id.reading_level2);
         Button level3 = findViewById(R.id.reading_level3);
         Button level4 = findViewById(R.id.reading_level4);
+        Button mainMenu = findViewById(R.id.mainmenu);
 
         level1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,14 @@ public class ReadingGameMain extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ReadingGameMain.this, ReadingGame4.class);
+                startActivity(intent);
+            }
+        });
+
+        mainMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReadingGameMain.this, StudentHome.class);
                 startActivity(intent);
             }
         });

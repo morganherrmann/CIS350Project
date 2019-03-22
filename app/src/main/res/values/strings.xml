@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CIS350Project</string>
+    <string name="app_name">Smarties</string>
     <string name="login">Log In</string>
     <string name="student">Student</string>
     <string name="parent">Parent</string>

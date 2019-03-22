@@ -1,8 +1,6 @@
 package com.example.moher.cis350project;
 
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -15,17 +13,16 @@ import android.widget.Toast;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 //learn numbers by matching pictures to numbers
 public class MathGame1 extends AppCompatActivity {
-    Map<Integer, Integer> problemAnswers;
-    Map<Integer, String> problemQuestions;
-    int currKey;
-    int score;
-    int index;
-    Random rand = new Random();
+    private int score;
+    private Map<Integer, Integer> problemAnswers;
+    private Map<Integer, String> problemQuestions;
+    private int currKey;
+    private int index;
+    private Random rand = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +31,7 @@ public class MathGame1 extends AppCompatActivity {
 
         problemAnswers = new HashMap<Integer, Integer>();
         problemQuestions = new HashMap<Integer, String>();
+
 
         //fill maps of images, answers, and questions
         problemAnswers.put(R.drawable.puppies, 4);
@@ -51,12 +49,11 @@ public class MathGame1 extends AppCompatActivity {
 
 
 
-        //separate class to handle drawing image?
-
         //pick random problem to start
         index = rand.nextInt(problemAnswers.size());
 
         currKey = Integer.parseInt(problemAnswers.keySet().toArray()[index].toString());
+
 
         final ImageView currImage = findViewById(R.id.myimage);
         currImage.setImageResource(currKey);
@@ -86,13 +83,13 @@ public class MathGame1 extends AppCompatActivity {
 
                     toast.show();
 
-                    //pick next random problem (different from curr problem)
                     int prevIndex = index;
                     while(index == prevIndex) {
                         index = rand.nextInt(problemAnswers.size());
                     }
-
                     currKey = Integer.parseInt(problemAnswers.keySet().toArray()[index].toString());
+
+
                     currImage.setImageResource(currKey);
                     currProblem.setText("How many " + problemQuestions.get(currKey).toString() + " are there?");
 
