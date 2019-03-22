@@ -18,7 +18,7 @@ public class MathGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_game);
 
-        Button level3 = findViewById(R.id.level3);
+        Button level3 = findViewById(R.id.mathlevel3);
 
         level3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +30,19 @@ public class MathGame extends AppCompatActivity {
             }
         });
 
-        Button level1 = findViewById(R.id.level1);
+        Button level2 = findViewById(R.id.mathlevel2);
+
+        level2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MathGame.this, MathGame2.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+        Button level1 = findViewById(R.id.mathlevel1);
 
         level1.setOnClickListener(new View.OnClickListener() {
             @Override

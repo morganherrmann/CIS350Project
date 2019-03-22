@@ -14,7 +14,6 @@ import java.util.Map;
 import java.util.Random;
 
 public class MathGame3 extends AppCompatActivity {
-
     private Map<String, Integer> sampleProblems;
     private int score;
     private int index;
