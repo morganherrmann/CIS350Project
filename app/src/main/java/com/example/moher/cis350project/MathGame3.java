@@ -63,7 +63,6 @@ public class MathGame3 extends AppCompatActivity {
                     View toastView = toast.getView();
                     toastView.setBackgroundColor(Color.GREEN);
 
-
                     toast.show();
 
                     //pick next random problem (different from curr problem)
