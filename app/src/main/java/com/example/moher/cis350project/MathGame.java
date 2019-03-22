@@ -30,12 +30,27 @@ public class MathGame extends AppCompatActivity {
             }
         });
 
+
+
         Button level1 = findViewById(R.id.level1);
 
         level1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MathGame.this, MathGame1.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+        Button minuteMath = findViewById(R.id.minutemath);
+
+        minuteMath.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MathGame.this, MinuteMath.class);
                 startActivity(intent);
 
 
