@@ -9,7 +9,6 @@
         android:layout_height="20dp" />
 
     <TextView
-        android:id="@+id/problem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Match the word!"
@@ -45,7 +44,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="70dp"/>
+        android:layout_height="50dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -59,12 +58,18 @@
         android:layout_gravity="center"
         android:id="@+id/word_sound"
         android:src="@drawable/musical_note"/>
-    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/gameResults"
         android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="20dp"
         android:text="Congrats! You finished learning all the words!"
         android:visibility="invisible"/>
 
