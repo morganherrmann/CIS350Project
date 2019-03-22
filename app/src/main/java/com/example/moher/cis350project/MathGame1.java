@@ -88,12 +88,10 @@ public class MathGame1 extends AppCompatActivity {
 
                     toast.show();
 
+                    index = rand.nextInt(problemAnswers.size());
+                    currKey = Integer.parseInt(problemAnswers.keySet().toArray()[index].toString());
 
-                   // while(usedProblems.contains(currKey)) {
-                        index = rand.nextInt(problemAnswers.size());
-                        currKey = Integer.parseInt(problemAnswers.keySet().toArray()[index].toString());
 
-                    //}
                     currImage.setImageResource(currKey);
                     currProblem.setText("How many " + problemQuestions.get(currKey).toString() + " are there?");
 
