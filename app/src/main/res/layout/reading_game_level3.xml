@@ -94,6 +94,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
+            android:background="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="10dp"
             android:text="Play Again"/>
 
         <Button
@@ -102,6 +105,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
+            android:background="@color/blue"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="10dp"
             android:text="Go Back"/>
 
         <Button
@@ -110,6 +116,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:visibility="invisible"
+            android:background="@color/blue"
+            android:textColor="@android:color/white"
             android:text="Next Level"/>
     </LinearLayout>
 
